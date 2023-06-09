@@ -1,0 +1,48 @@
+{
+	"name": "tree-test",
+	"displayName": "Tree test",
+	"description": "Tree provider test",
+	"version": "0.0.1",
+	"publisher": "caleteeter",
+	"private": true,
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/caleteeter/tree-click-test"
+	},
+	"engines": {
+		"vscode": "^1.74.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:json",
+		"onLanguage:jsonc"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"views": {
+			"explorer": [
+				{
+					"id": "exampleTreeView",
+					"name": "Example Tree View"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"lint": "eslint \"src/**/*.ts\""
+	},
+	"devDependencies": {
+		"@types/node": "^20.2.5",
+		"@types/vscode": "^1.79.0",
+		"@typescript-eslint/eslint-plugin": "^5.59.9",
+		"@typescript-eslint/parser": "^5.59.9",
+		"eslint": "^8.42.0",
+		"typescript": "^5.1.3"
+	}
+}
